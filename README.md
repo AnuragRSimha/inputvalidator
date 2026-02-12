@@ -57,7 +57,7 @@ If you don't have npm installed, please download it from https://nodejs.org/en o
 ├── App.css --> Contains CSS for the entire project
 ├── App.jsx --> Parent for setting up everything
 ├── index.css --> Default file created during setup
-└── main.jsx --> The root file
+└── main.jsx --> The root file (also created during setup)
 ```
 ### File Interaction
 - The file, main.jsx acts as the root, which sets up the parent, App.jsx.
