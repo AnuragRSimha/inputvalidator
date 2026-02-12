@@ -6,7 +6,7 @@ const DetailsDisplay = ({name, age}) => {
     return (
         <div>
             <hr className="header-line" />
-            <p>You are <strong>{name}</strong>, and you are <strong>{age}</strong> years old.</p>
+            <p className='detailsDisplay'>You are <strong>{name}</strong>, and you are <strong>{age}</strong> years old.</p>
         </div>
     );
 };

@@ -87,3 +87,4 @@ Age:
 1. Zero is not a valid age.
 2. The age should be a positive number.
 3. Age cannot contain decimal numbers like 23.5, 23.6, etc.
+---
