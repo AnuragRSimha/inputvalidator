@@ -29,7 +29,7 @@ const Form = ({onSubmittingForm}) => {
         e.preventDefault();
         if(!nameError && !ageError && name && age){
             onSubmittingForm({
-                name: name, 
+                name: name.trim(), 
                 age: Number(age)
             })
         }
