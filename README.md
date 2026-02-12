@@ -72,6 +72,7 @@ Several ways of data entry were considered to perform validation.\
 Name:
 1. No name can contain a single character. There should be a minimum of two characters.
 2. No name can contain numbers in digital format like Alfred 3, Leonard 2, etc. But, can contain numbers in Roman numeral. For example, names like Alfred III, Leonard II, etc. are allowed.
+3. Names with special characters like Alfred*, Leonard! are not allowd.
 
 Age:
 1. Zero is not a valid age.
