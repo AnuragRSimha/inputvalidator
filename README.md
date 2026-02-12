@@ -16,7 +16,7 @@ chmod +x setup.sh
 ```
 ./setup.sh
 ```
-If you are on a windows machine, either use WSL (Windows Sybsystem for Linux) or Gitbash to run setup.sh.
+If you are on a windows machine, either use WSL (Windows Subsystem for Linux) or Gitbash to run setup.sh.
 
 2. <b>Manual process:</b> Running the commands executed by setup.sh:
 ```
@@ -73,7 +73,7 @@ Several ways of data entry were considered to perform validation.\
 Name:
 1. No name can contain a single character. There should be a minimum of two characters.
 2. No name can contain numbers in digital format like Alfred 3, Leonard 2, etc. But, can contain numbers in Roman numeral. For example, names like Alfred III, Leonard II, etc. are allowed.
-3. Names with special characters like Alfred*, Leonard! are not allowd.
+3. Names with special characters like Alfred*, Leonard! are not allowed. Exceptions exist for names with apostrephes and hyphens. For example, names like Eric O'Connor, Ella-rose, Sean D'Bordeaux, etc. are allowed.
 
 Age:
 1. Zero is not a valid age.

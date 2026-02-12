@@ -28,8 +28,23 @@ const Form = ({onSubmittingForm}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if(!nameError && !ageError && name && age){
+            const romanRegex = /^(?=[MDCLXVI])M*(C[MD]|D?C{0,3})(X[CL]|L?X{0,3})(I[XV]|V?I{0,3})$/i;
+            const formattedName = name
+                .trim()
+                .split(/\s+/)
+                .map(word => {
+                    if (romanRegex.test(word)) {
+                        return word.toUpperCase();
+                    }
+                    let processed = word.toLowerCase();
+                    processed = processed.charAt(0).toUpperCase() + processed.slice(1);
+                    return processed.replace(/([-'])([a-z])/g, (match, separator, char) => 
+                        separator + char.toUpperCase()
+                    );
+                })
+                .join(' ');
             onSubmittingForm({
-                name: name.trim(), 
+                name: formattedName, 
                 age: Number(age)
             })
         }
