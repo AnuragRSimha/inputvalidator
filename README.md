@@ -8,7 +8,7 @@ University ID: 14763701
 You can do any one of these:
 1. <b>Super quick and easy:</b> Run setup.sh for convenience.\
 This script is **completely safe** to run. It only runs a set of git and npm commands. \
-It takes care of the **entire setup process for you including running the application**. All you've got to do is execute the commands, 
+It takes care of the **entire setup process for you including running the application**. All you've got to do is execute the following commands: 
 ```
 chmod +x setup.sh
 ``` 
