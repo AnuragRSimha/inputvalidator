@@ -22,7 +22,8 @@ chmod +x setup.sh
 ```
 If you are on a windows machine, either use WSL (Windows Subsystem for Linux) or Gitbash to run setup.sh.
 
-B. <b>Manual process:</b> Running the commands executed by setup.sh:
+B. <b>Manual process:</b> \
+Running the commands executed by setup.sh:
 ```
 git clone git@gitlab.com:anurag.rsimha/cs530-assignment-3.git
 ```
