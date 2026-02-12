@@ -80,12 +80,16 @@ Several ways of data entry were considered to perform validation.\
 Name:
 1. No name can contain a single character. There should be a minimum of two characters.
 2. No name can contain numbers in digital format like Alfred 3, Leonard 2, etc. But, can contain numbers in Roman numeral. For example, names like Alfred III, Leonard II, etc. are allowed.
-3. Names with special characters like Alfred*, Leonard! are not allowed. Exceptions exist for names with apostrephes and hyphens. For example, names like Eric O'Connor, Ella-rose, Sean D'Bordeaux, etc. are allowed.
+3. Names with special characters like Alfred*, Leonard! are not allowed. Exceptions exist for names with apostrophes and hyphens. For example, names like Eric O'Connor, Ella-rose, Sean D'Bordeaux, etc. are allowed.
 4. No matter the case you use to enter your name, the program formats it properly and sends the data. For example, if you enter gEOrgE O'rEillY iIi, the output will present George O'Reilly III as the name.
 
-The regex, "/[^\p{L}\s'-]/u" performs checks (2) and (3). The \p{L} is there to support names in multiple languages like Bård, Jørgen, Weiß, Özdemir, Núñez, Ibáñez, etc. The apostrephe and hyphen allow names like O'Reilly, Ella-rose, etc.
+The regex, "/[^\p{L}\s'-]/u" performs checks (2) and (3). The \p{L} is there to support names in multiple languages like Bård, Jørgen, Weiß, Özdemir, Núñez, Ibáñez, etc. The apostrophe and hyphen allow names like O'Reilly, Ella-rose, etc.
 
-A good string to test this is: BårdJørgen-o'weißÖzdemir d'NúñezIbáñez mXcIv
+A good string to test this is: 
+```
+BårdJørgen-o'weißÖzdemir d'NúñezIbáñez mXcIv
+```
+The output will be: `Bårdjørgen-O'Weißözdemir D'Núñezibáñez MXCIV` 
 
 Age:
 1. Zero is not a valid age.
