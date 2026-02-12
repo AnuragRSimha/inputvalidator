@@ -7,7 +7,7 @@ Drexel Email: ars589@drexel.edu
 
 ## Installation Guidelines
 You can do any one of these:
-1. <b>Super quick and easy:</b> Run setup.sh for convenience.\
+1. <b>Super quick and easy:</b> Just download setup.sh from this repository and run it.\
 This script is **completely safe** to run. It only runs a set of git and npm commands. \
 It takes care of the **entire setup process for you including running the application**. All you've got to do is execute the following commands: 
 ```
