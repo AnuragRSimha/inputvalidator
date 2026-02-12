@@ -79,6 +79,7 @@ Name:
 1. No name can contain a single character. There should be a minimum of two characters.
 2. No name can contain numbers in digital format like Alfred 3, Leonard 2, etc. But, can contain numbers in Roman numeral. For example, names like Alfred III, Leonard II, etc. are allowed.
 3. Names with special characters like Alfred*, Leonard! are not allowed. Exceptions exist for names with apostrephes and hyphens. For example, names like Eric O'Connor, Ella-rose, Sean D'Bordeaux, etc. are allowed.
+4. No matter the case you use to enter your name, the program formats it properly and sends the data. For example, if you enter gEOrgE O'rEillY iIi, the output will present George O'Reilly III as the name.
 
 Age:
 1. Zero is not a valid age.
