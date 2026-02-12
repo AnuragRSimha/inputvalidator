@@ -83,6 +83,10 @@ Name:
 3. Names with special characters like Alfred*, Leonard! are not allowed. Exceptions exist for names with apostrephes and hyphens. For example, names like Eric O'Connor, Ella-rose, Sean D'Bordeaux, etc. are allowed.
 4. No matter the case you use to enter your name, the program formats it properly and sends the data. For example, if you enter gEOrgE O'rEillY iIi, the output will present George O'Reilly III as the name.
 
+The regex, "/[^\p{L}\s'-]/u" performs this check. The \p{L} is there to support names in multiple languages like Bård, Jørgen, Özdemir, Weiß, Núñez, Ibáñez, etc. The apostrephe and hyphen allows names like O'Reilly, Ella-rose, etc.
+
+A good string to test this is: BårdJørgen-o'ÖzdemirWeiß d'NúñezIbáñez mXcIv
+
 Age:
 1. Zero is not a valid age.
 2. The age should be a positive number.
