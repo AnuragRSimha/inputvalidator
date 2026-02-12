@@ -12,7 +12,7 @@
 // 3. Age cannot be a decimal number.
 export const validateName = (name) => {
     const theName = name.trim();
-    const specialCharRegex = /[^a-zA-Z\s'-]/;
+    const specialCharRegex = /[^\p{L}\s'-]/u;
     if (!theName) {
         return "The name is required";
     }
