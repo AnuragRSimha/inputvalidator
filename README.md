@@ -6,7 +6,7 @@ University ID: 14763701 \
 Drexel Email: ars589@drexel.edu
 
 ## Installation Guidelines
-You can do any one of these:
+You can do **any one** of these:
 
 <b>A. Super quick and easy:</b> \
 Simply download and run setup.sh either from this repository by clicking the download button, or click on this link to directly download the script: [setup.sh](https://gitlab.com/anurag.rsimha/cs530-assignment-3/-/raw/main/setup.sh?ref_type=heads&inline=false)
@@ -21,6 +21,8 @@ chmod +x setup.sh
 ./setup.sh
 ```
 If you are on a windows machine, either use WSL (Windows Subsystem for Linux) or Gitbash to run setup.sh.
+
+**OR**
 
 <b>B. Manual process:</b> \
 Running the commands executed by setup.sh:
