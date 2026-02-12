@@ -85,7 +85,7 @@ Name:
 
 The regex, "/[^\p{L}\s'-]/u" performs checks (2) and (3). The \p{L} is there to support names in multiple languages like Bård, Jørgen, Özdemir, Weiß, Núñez, Ibáñez, etc. The apostrephe and hyphen allows names like O'Reilly, Ella-rose, etc.
 
-A good string to test this is: BårdJørgen-o'ÖzdemirWeiß d'NúñezIbáñez mXcIv
+A good string to test this is: BårdJørgen-o'weißÖzdemir d'NúñezIbáñez mXcIv
 
 Age:
 1. Zero is not a valid age.
