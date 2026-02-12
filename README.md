@@ -66,11 +66,11 @@ If you don't have npm installed, please download it from https://nodejs.org/en o
 - Both, App.jsx and Form.jsx use the "useState" library provided by react to handle states during input.
 - Below is a textual representation of only the flow of data:
 ```
-            ┌─3── ABC, 24 ──> DetailsDisplay.jsx
+            ┌─3── Abc, 24 ──> DetailsDisplay.jsx
             ↑                            
           App.jsx ───1───> Form.jsx      
             ↑                  ↓         
-            └── ABC, 24 ────2──┘     
+            └── Abc, 24 ────2──┘     
 ```
 
 ### Input Validation
