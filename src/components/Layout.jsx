@@ -13,9 +13,6 @@ const Layout = ({ children }) => {
             {children}
         </main>
       </div>
-      <div>
-        <p className='madewithmessage'>Made with love and dedication by Anurag R Simha</p>
-      </div>
     </div>
   );
 };
