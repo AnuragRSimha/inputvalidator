@@ -1,0 +1,124 @@
+/* 
+  Author: Anurag R Simha
+  This file contains all the design for the webpage.
+*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 20px; 
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  padding: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 30px;
+}
+
+button:disabled {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  margin-bottom: 15px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: border-color 0.25s;
+}
+
+button:enabled {
+  background-color: aquamarine;
+  margin-bottom: 10px;
+}
+
+.header-line {
+  border: 0;
+  height: 1px;
+  background-color: #ccc; 
+  margin: 10px 0 20px 0;  
+  width: 100%;  
+}
+
+.inputgroup label {
+  display: inline-block;
+  width: 120px;  
+  text-align: right;  
+  margin-right: 15px; 
+  font-weight: bold;
+}
+
+input {
+  margin: 5px 0; 
+  padding: 8px;
+  width: 200px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.inputgroup {
+  margin-bottom: 15px;
+}
+
+.madewithmessage {
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 
+  The code below has been included keeping in mind the perspective of 
+  running this page on a phone. The elements adapt to a phone screen accordingly.
+*/
+
+@media screen and (max-width: 480px) {
+  .card {
+    background: rgb(255, 255, 255);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 5px;
+    width: 100%;
+    max-width: 450px; 
+    box-sizing: border-box;
+  }
+
+  .inputgroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .inputgroup label {
+    display: block;
+    width: 100%;  
+    text-align: center;
+    margin-right: 0;   
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input {
+    padding: 8px;
+    width: 90%;   
+    max-width: 250px;  
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box; 
+  }
+}
