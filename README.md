@@ -6,8 +6,8 @@ University ID: 14763701 \
 Drexel Email: ars589@drexel.edu
 
 ## Installation Guidelines
-You can do any one of these:
-1. <b>Super quick and easy:</b> \
+You can do any one of these:\
+A. <b>Super quick and easy:</b> \
 Simply download and run setup.sh either from this repository by clicking the download button, or click on this link to directly download the script: [setup.sh](https://gitlab.com/anurag.rsimha/cs530-assignment-3/-/raw/main/setup.sh?ref_type=heads&inline=false)
 
 This script is **completely safe** to run. It only runs a set of git and npm commands.
@@ -21,7 +21,7 @@ chmod +x setup.sh
 ```
 If you are on a windows machine, either use WSL (Windows Subsystem for Linux) or Gitbash to run setup.sh.
 
-2. <b>Manual process:</b> Running the commands executed by setup.sh:
+B. <b>Manual process:</b> Running the commands executed by setup.sh:
 ```
 git clone git@gitlab.com:anurag.rsimha/cs530-assignment-3.git
 ```
