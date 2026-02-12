@@ -20,6 +20,7 @@ while ! command -v npm &> /dev/null; do
 done
 echo "npm found! Version: $(npm -v)"
 echo ""
+
 echo "Checking for git"
 while ! command -v git &> /dev/null; do
     echo "--------------------------------------------------------"
@@ -38,13 +39,19 @@ done
 
 echo "Git found! Version: $(git --version)"
 echo ""
-echo "Cloning into repository..."
-git clone git@gitlab.com:anurag.rsimha/cs530-assignment-3.git
+
+REPO_DIR="cs530-assignment-3"
+if [ ! -d "$REPO_DIR" ]; then
+    echo "Cloning into repository..."
+    git clone git@gitlab.com:anurag.rsimha/cs530-assignment-3.git
+else
+    echo "Directory $REPO_DIR already exists. Skipping clone..."
+fi
 
 echo "Switching directory"
-cd cs530-assignment-3
-
+cd "$REPO_DIR"
 echo ""
+
 echo "Running 'npm install'..."
 npm install
 
