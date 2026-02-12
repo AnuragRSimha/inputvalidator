@@ -6,16 +6,30 @@ University ID: 14763701
 
 ## Installation Guidelines
 You can do any one of these:
-1. <b>Quick and easy:</b> Run setup.sh for convenience.\
+1. <b>Super quick and easy:</b> Run setup.sh for convenience.\
 This script is **completely safe** to run. It only runs a set of git and npm commands. \
-It takes care of the **entire setup process for you including running the application**. All you've got to do is execute the commands, ```chmod +x setup.sh``` and ```./setup.sh```.\
+It takes care of the **entire setup process for you including running the application**. All you've got to do is execute the commands, 
+```
+chmod +x setup.sh
+``` 
+```
+./setup.sh
+```
 If you are on a windows machine, either use WSL (Windows Sybsystem for Linux) or Gitbash to run setup.sh.
 
 2. <b>Manual process:</b> Running the commands executed by setup.sh:
-<pre>git clone git@gitlab.com:anurag.rsimha/cs530-assignment-3.git</pre>
-<pre>cd cs530-assignment-3</pre>
-<pre>npm install</pre>
-<pre>npm run dev</pre>
+```
+git clone git@gitlab.com:anurag.rsimha/cs530-assignment-3.git
+```
+```
+cd cs530-assignment-3
+```
+```
+npm install
+```
+```
+npm run dev
+```
 
 Copy and paste/Ctrl+Click the link shown on the terminal window.
 
