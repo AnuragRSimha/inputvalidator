@@ -40,16 +40,11 @@ done
 echo "Git found! Version: $(git --version)"
 echo ""
 
-REPO_DIR="cs530-assignment-3"
-if [ ! -d "$REPO_DIR" ]; then
-    echo "Cloning into repository..."
-    git clone git@gitlab.com:anurag.rsimha/cs530-assignment-3.git
-else
-    echo "Directory $REPO_DIR already exists. Skipping clone..."
-fi
+echo "Cloning into repository..."
+git clone git@gitlab.com:anurag.rsimha/cs530-assignment-3.git
 
 echo "Switching directory"
-cd "$REPO_DIR"
+cd cs530-assignment-3
 echo ""
 
 echo "Running 'npm install'..."
