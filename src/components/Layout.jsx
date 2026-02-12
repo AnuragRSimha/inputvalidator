@@ -1,6 +1,6 @@
 // Author: Anurag R Simha
-// This is the parent component that renders elements of the webpage. Everything inside <Layout> are its children.
-// In this case, Form and DetailsDisplay are the children of Layout. Please refer to App.jsx.
+// This file helps render the elements of the webpage. This is a wrapper for Form and DetailsDisplay. Everything passed
+// within <Layout> is wrapped here in {children}.
 import '../App.css';
 
 const Layout = ({ children }) => {

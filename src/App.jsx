@@ -1,5 +1,5 @@
 // Author: Anurag R Simha
-// This file helps render the elements of the webpage.
+// This is the parent component that renders elements of the webpage. It sets up the entire look and feel of the webpage.
 import { useState } from 'react'
 import './App.css'
 import Layout from './components/Layout'
