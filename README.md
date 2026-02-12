@@ -2,7 +2,8 @@
 ## Details
 <b>Framework: React</b> \
 Author: Anurag R Simha \
-University ID: 14763701
+University ID: 14763701 \
+Drexel Email: ars589@drexel.edu
 
 ## Installation Guidelines
 You can do any one of these:
