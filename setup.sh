@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Author: Anurag R Simha
+
+# This is the project setup wizard. It helps to quickly finish the setup of the project without any user interaction.
+# It checks if you have npm and git installed on your computer, and if you don't, it waits until you download them and
+# notify the script with "Done". If you do have npm and git installed, it clones the repository, cd's into it, runs
+# npm install, and starts the server with npm run dev.
+
+# This script is completely safe to run. There are no viruses injected by this script. 
+# It only runs the git and npm commands.
+
+# This script can be found on: https://gitlab.com/anurag.rsimha/cs530-assignment-3/-/blob/main/setup.sh?ref_type=heads
+
 echo "--- Project Setup Wizard ---"
 
 echo "Checking for npm"
