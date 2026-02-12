@@ -6,7 +6,7 @@ University ID: 14763701 \
 Drexel Email: ars589@drexel.edu
 
 ## Installation Guidelines
-You can do any one of these:\
+You can do any one of these:
 
 A. <b>Super quick and easy:</b> \
 Simply download and run setup.sh either from this repository by clicking the download button, or click on this link to directly download the script: [setup.sh](https://gitlab.com/anurag.rsimha/cs530-assignment-3/-/raw/main/setup.sh?ref_type=heads&inline=false)
