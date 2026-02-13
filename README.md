@@ -26,6 +26,8 @@ Simply download setup.bat either from this repository by clicking the download b
 
 Run setup.bat from a command line terminal window by simply heading to your downloads directory and entering "setup.bat".
 
+This script is **also completely safe to run.** It's just a translation of setup.sh to make it compatible for Windows.
+
 If your download is blocked or the file is prevented from running, install git bash from https://git-scm.com/downloads and follow the steps laid out above in (i).
 
 **OR**
