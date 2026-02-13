@@ -4,6 +4,7 @@
 import { useState } from "react";
 import '../App.css'
 import { validateName, validateAge } from './validation';
+import { romanCharsRegex } from "./regex";
 const Form = ({onSubmittingForm}) => {
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
@@ -28,12 +29,11 @@ const Form = ({onSubmittingForm}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if(!nameError && !ageError && name && age){
-            const romanRegex = /^(?=[MDCLXVI])M*(C[MD]|D?C{0,3})(X[CL]|L?X{0,3})(I[XV]|V?I{0,3})$/i;
             const formattedName = name
                 .trim()
                 .split(/\s+/)
                 .map(word => {
-                    if (romanRegex.test(word)) {
+                    if (romanCharsRegex.test(word)) {
                         return word.toUpperCase();
                     }
                     let processed = word.toLowerCase();
