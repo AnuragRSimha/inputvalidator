@@ -62,7 +62,7 @@ const Form = ({onSubmittingForm}) => {
                 <input type = 'number' placeholder="Enter age" value={age} onChange={handleAgeChange}/>
                 {ageError && <span style={{ color: 'red', display: 'block' }}>{ageError}</span>}
             </div>
-            <button type = "submit" disabled={!!nameError || !!ageError || !name || !age}><b>Submit</b></button>
+            <button className="btn btn-primary" type = "submit" disabled={!!nameError || !!ageError || !name || !age}><b>Submit</b></button>
         </form>
     );
 };

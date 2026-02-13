@@ -5,7 +5,7 @@ import '../App.css'
 const DetailsDisplay = ({name, age}) => {
     return (
         <div>
-            <hr className="header-line" />
+            <hr className="my-3" />
             <p className='detailsDisplay'>You are <strong>{name}</strong>, and you are <strong>{age}</strong> years old.</p>
         </div>
     );
