@@ -10,16 +10,17 @@
 // 1. Age cannot be 0.
 // 2. Age cannot be a negative number.
 // 3. Age cannot be a decimal number.
+import { allwedCharsRegex } from "./regex";
+
 export const validateName = (name) => {
     const theName = name.trim();
-    const specialCharRegex = /[^\p{L}\s'-]/u;
     if (!theName) {
         return "The name is required";
     }
     if (theName.length < 2) {
         return "The name must be at least 2 characters long";
     }
-    if (specialCharRegex.test(theName)) {
+    if (allwedCharsRegex.test(theName)) {
         return "No numbers or special characters";
     }
     
@@ -40,6 +41,9 @@ export const validateAge = (age) => {
     }
     if (!Number.isInteger(theAge)) {
         return "The age cannot contain a decimal point";
+    }
+    if(theAge > 123) {
+        return "Maximum allowed age is 123 years"
     }
     else{
         return ""
