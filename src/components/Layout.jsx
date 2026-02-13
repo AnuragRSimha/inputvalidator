@@ -5,9 +5,9 @@ import '../App.css';
 
 const Layout = ({ children }) => {
   return (
-    <div className='container'>
-      <div className='card'>
-        <h1>Input Validator</h1>
+    <div className='validator-container'>
+      <div className='validator-card'>
+        <h1><b>Input Validator</b></h1>
         <hr className="header-line" />
         <main>
             {children}
