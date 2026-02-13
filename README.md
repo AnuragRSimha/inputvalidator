@@ -55,6 +55,7 @@ If you don't have npm installed, please download it from https://nodejs.org/en o
 │   ├── DetailsDisplay.jsx --> Displays name and age
 │   ├── Form.jsx --> Main form with required elements
 │   ├── Layout.jsx --> Wrapper for Form and DetailsDisplay
+│   ├── regex.js --> Regex properties file with validation regex values
 │   └── validation.js --> JavaScript file that validates user input
 ├── App.css --> Contains CSS for the entire project
 ├── App.jsx --> Parent for setting up everything
@@ -87,14 +88,17 @@ Name:
 
 The regex, "/[^\p{L}\s'-]/u" performs checks (2) and (3). The \p{L} is there to support names in multiple languages like Bård, Jørgen, Weiß, Özdemir, Núñez, Ibáñez, etc. The apostrophe and hyphen allow names like O'Reilly, Ella-rose, etc.
 
-A good string to test this is: 
+There is a regex properties file called "regex.js" that contains the regex values used while performing a validation or conversion. This has been made in order to adapt to any change in the requirements of the format of a name.
+
+A good string to test for the name is: 
 ```
 BårdJørgen-o'weißÖzdemir d'NúñezIbáñez mXcIv
 ```
-The output will be: `Bårdjørgen-O'Weißözdemir D'Núñezibáñez MXCIV` 
+The output will be: `Bårdjørgen-O'Weißözdemir D'Núñezibáñez MXCIV`
 
 Age:
 1. Zero is not a valid age.
 2. The age should be a positive number.
 3. Age cannot contain decimal numbers like 23.5, 23.6, etc.
+4. The maximum allowed age is 123 years.
 ---
