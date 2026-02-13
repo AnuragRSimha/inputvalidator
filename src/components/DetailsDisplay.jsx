@@ -5,7 +5,7 @@ import '../App.css'
 const DetailsDisplay = ({name, age}) => {
     return (
         <div>
-            <hr className="mt-2 mb-3" />
+            <hr className="mt-0 mb-3" />
             <p className='detailsDisplay'>You are <strong>{name}</strong>, and you are <strong>{age}</strong> years old.</p>
         </div>
     );
