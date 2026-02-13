@@ -9,7 +9,7 @@ Drexel Email: ars589@drexel.edu
 You can do **any one** of these:
 
 <b>A. Super quick and easy:</b> \
-i. If you are on a Linux/MacOS machine or on a machine with Windows that has Git bash installed: \
+i. If you are on a Linux/MacOS machine: \
 Simply download and run setup.sh either from this repository by clicking the download button, or click on this link to directly download the script: [setup.sh](https://gitlab.com/anurag.rsimha/cs530-assignment-3/-/raw/main/setup.sh?ref_type=heads&inline=false)
 
 This script is **completely safe** to run. It only runs a set of git and npm commands.
@@ -22,7 +22,9 @@ chmod +x setup.sh
 ./setup.sh
 ```
 ii. If you are on a Windows machine: \
-Simply download and run setup.bat either from this repository by clicking the download button, or click on this link to directly download the script: [setup.bat](https://gitlab.com/anurag.rsimha/cs530-assignment-3/-/raw/main/setup.bat?ref_type=heads&inline=false)
+Simply download setup.bat either from this repository by clicking the download button, or click on this link to directly download the script: [setup.bat](https://gitlab.com/anurag.rsimha/cs530-assignment-3/-/raw/main/setup.bat?ref_type=heads&inline=false)
+
+Run setup.bat from a command line terminal window by simply heading to your downloads directory and entering "setup.bat".
 
 If your download is blocked or the file is prevented from running, install git bash from https://git-scm.com/downloads and follow the steps laid out above in (i).
 
