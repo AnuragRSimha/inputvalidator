@@ -9,7 +9,7 @@ Drexel Email: ars589@drexel.edu
 You can do **any one** of these:
 
 <b>A. Super quick and easy:</b> \
-i. If you are on a Linux/MacOS machine: \
+i. If you are on a Linux/MacOS machine or on a machine with Windows that has Git bash installed: \
 Simply download and run setup.sh either from this repository by clicking the download button, or click on this link to directly download the script: [setup.sh](https://gitlab.com/anurag.rsimha/cs530-assignment-3/-/raw/main/setup.sh?ref_type=heads&inline=false)
 
 This script is **completely safe** to run. It only runs a set of git and npm commands.
@@ -21,8 +21,10 @@ chmod +x setup.sh
 ```
 ./setup.sh
 ```
-ii. If you are on a windows machine: \
+ii. If you are on a Windows machine: \
 Simply download and run setup.bat either from this repository by clicking the download button, or click on this link to directly download the script: [setup.bat](https://gitlab.com/anurag.rsimha/cs530-assignment-3/-/raw/main/setup.bat?ref_type=heads&inline=false)
+
+If your download is blocked or the file is prevented from running, install git bash from https://git-scm.com/downloads and follow the steps laid out above in (i).
 
 **OR**
 
@@ -82,11 +84,11 @@ If you don't have npm installed, please download it from https://nodejs.org/en o
 Several ways of data entry were considered to perform validation.\
 Name:
 1. No name can contain a single character. There should be a minimum of two characters.
-2. No name can contain numbers in digital format like Alfred 3, Leonard 2, etc. But, can contain numbers in Roman numeral. For example, names like Alfred III, Leonard II, etc. are allowed.
+2. No name can contain numbers in digital format like Alfred 3, Leonard2, etc. But, can contain numbers in Roman numeral. For example, names like Alfred III, Leonard II, etc. are allowed.
 3. Names with special characters like Alfred*, Leonard! are not allowed. Exceptions exist for names with apostrophes and hyphens. For example, names like Eric O'Connor, Ella-rose, Sean D'Bordeaux, etc. are allowed.
 4. No matter the case you use to enter your name, the program formats it properly and sends the data. For example, if you enter gEOrgE O'rEillY iIi, the output will present George O'Reilly III as the name.
 
-The regex, "/[^\p{L}\s'-]/u" performs checks (2) and (3). The \p{L} is there to support names in multiple languages like Bård, Jørgen, Weiß, Özdemir, Núñez, Ibáñez, etc. The apostrophe and hyphen allow names like O'Reilly, Ella-rose, etc.
+The regex, "/[^\p{L}\s'-]/u", performs checks (2) and (3). The \p{L} is there to support names in multiple languages like Bård, Jørgen, Weiß, Özdemir, Núñez, Ibáñez, etc. The apostrophe and hyphen allow names like O'Reilly, Ella-rose, etc.
 
 There is a regex properties file called "regex.js" that contains the regex values used while performing a validation or conversion. This has been made in order to adapt to any change in the requirements of the format of a name.
 
