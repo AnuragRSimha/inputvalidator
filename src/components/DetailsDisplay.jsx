@@ -37,7 +37,7 @@ const DetailsDisplay = ({ name, age }) => {
     };
 
     return (
-        <div className="details-wrapper">
+        <div className="detailsWrapper"> 
             <hr className="mt-0 mb-3" />
             <p className='detailsDisplay'>
                 {formatText(displayedText)}
