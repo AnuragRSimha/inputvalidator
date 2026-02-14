@@ -10,7 +10,7 @@ Drexel Email: ars589@drexel.edu
 **Any one** of the two setup methods can be followed:
 
 <b>A. Super quick and easy:</b> \
-i. If on a Linux/MacOS machine: \
+For Linux/MacOS: \
 Simply download and run setup.sh either from this repository by clicking the download button, or click on this link to directly download the script: [setup.sh](https://gitlab.com/anurag.rsimha/cs530-assignment-3/-/raw/main/setup.sh?ref_type=heads&inline=false)
 
 This script is **completely safe** to run. It only runs a set of git and npm commands.
@@ -22,7 +22,7 @@ chmod +x setup.sh
 ```
 ./setup.sh
 ```
-ii. If on a Windows machine: \
+For Windows: \
 Simply download setup.bat either from this repository by clicking the download button, or click on this link to directly download the script: [setup.bat](https://gitlab.com/anurag.rsimha/cs530-assignment-3/-/raw/main/setup.bat?ref_type=heads&inline=false)
 
 Run setup.bat from a command line terminal window by simply heading to the downloads directory and entering "setup.bat".
@@ -81,22 +81,22 @@ The entire code has been written with React. For styling, Bootstrap has been use
 - Both, App.jsx and Form.jsx use the "useState" library provided by react to handle states during input.
 - Below is a textual representation of only the flow of data:
 ```
-            ┌─3── Abc, 24 ──> DetailsDisplay.jsx
-            ↑                            
-          App.jsx ───1───> Form.jsx      
-            ↑                  ↓         
-            └── Abc, 24 ────2──┘     
+  ┌─3── Abc, 24 ──> DetailsDisplay.jsx
+  ↑                            
+App.jsx ───1───> Form.jsx      
+  ↑                  ↓         
+  └── Abc, 24 ────2──┘     
 ```
 
 ### Input Validation
-Several ways of data entry were considered to perform validation.\
 **Name:**
 1. No name can contain a single character. There should be a minimum of two characters.
-2. No name can contain numbers in digital format like Alfred 3, Leonard2, etc. But, can contain numbers in Roman numeral. For example, names like Alfred III, Leonard II, etc. are allowed.
-3. Names with special characters like Alfred*, Leonard! are not allowed. Exceptions exist for names with apostrophes and hyphens. For example, names like Eric O'Connor, Ella-rose, Sean D'Bordeaux, etc. are allowed.
-4. No matter the case used to enter the name, the program formats it properly and sends the data. For example, if the entered name is gEOrgE O'rEillY iIi, the output will present George O'Reilly III as the name.
+2. The form allows a maximum of 150 characters to be entered for the name.
+3. No name can contain numbers in digital format like Alfred 3, Leonard2, etc. But, can contain numbers in Roman numeral. For example, names like Alfred III, Leonard II, etc. are allowed.
+4. Names with special characters like Alfred*, Leonard! are not allowed. Exceptions exist for names with apostrophes and hyphens. For example, names like Eric O'Connor, Ella-rose, Sean D'Bordeaux, etc. are allowed.
+5. No matter the case used to enter the name, the program formats it properly and sends the data. For example, if the entered name is gEOrgE O'rEillY iIi, the output will present George O'Reilly III as the name.
 
-The regex, "/[^\p{L}\s'-]/u", performs checks (2) and (3). The \p{L} is there to support names in multiple languages like Bård, Jørgen, Weiß, Özdemir, Núñez, Ibáñez, etc. The apostrophe and hyphen allow names like O'Reilly, Ella-rose, etc.
+The regex, "/[^\p{L}\s'-]/u", performs checks (2) and (3). The \p{L} is there to support names from multiple languages like Bård, Jørgen, Weiß, Özdemir, Núñez, Ibáñez, etc. The apostrophe and hyphen allow names like O'Reilly, Ella-rose, etc.
 
 There is a regex properties file called "regex.js" that contains the regex values used while performing a validation or conversion. This has been made in order to adapt to any change in the requirements of the format of a name.
 

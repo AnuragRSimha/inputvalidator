@@ -92,7 +92,12 @@ const Form = ({onSubmittingForm}) => {
         <form onSubmit={handleSubmit}>
             <div className="inputgroup">
                 <label>Full name:</label> 
-                <input type = 'text' placeholder="Enter name" value={name} onChange={handleNameChange}/>
+                <input type = 'text' placeholder="Enter name" maxLength={150} value={name} onChange={handleNameChange}/>
+                {!name && !nameError && (
+                    <small style={{ color: '#888', display: 'block', marginTop: '2px' }}>
+                        Maximum 150 characters for the name
+                    </small>
+                )}
                 {nameError && <span style={{ color: 'red', display: 'block' }}>{nameError}</span>}
             </div>
             <div className="inputgroup">
