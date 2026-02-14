@@ -1,16 +1,54 @@
 // Author: Anurag R Simha
 // This is the form component. Here, the validation form is created. Input is validated as the user enters data.
-// If all details are correct, the button enables.
+// If all the details are correct, the button enables.
+// Conditions for the name and age can be found in the README file.
 import { useState } from "react";
 import '../App.css'
-import { validateName, validateAge } from './validation';
-import { romanCharsRegex } from "./regex";
+import { romanCharsRegex, allwedCharsRegex } from "./regex";
 const Form = ({onSubmittingForm}) => {
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
 
     const [nameError, setNameError] = useState('');
     const [ageError, setAgeError] = useState('');
+
+    const validateName = (name) => {
+        const theName = name.trim();
+        if (!theName) {
+            return "The name is required";
+        }
+        if (theName.length < 2) {
+            return "The name must be at least 2 characters long";
+        }
+        if (allwedCharsRegex.test(theName)) {
+            return "No numbers or special characters";
+        }
+        
+        return "";
+    };
+
+    const validateAge = (age) => {
+        if (age === "" || age === null) {
+            return "The age is required";
+        }
+
+        const theAge = Number(age);
+        if(theAge == 0){
+            return "The age cannot be 0"
+        }
+        if (theAge < 0) {
+            return "The age should be a positive number";
+        }
+        if (!Number.isInteger(theAge)) {
+            return "The age cannot contain a decimal point";
+        }
+        if(theAge > 123) {
+            return "Maximum allowed age is 123 years"
+        }
+        else{
+            return ""
+        }
+    };
 
     const handleNameChange = (e) => {
         const theName = e.target.value;
