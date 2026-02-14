@@ -1,34 +1,35 @@
 # Assignment 3
 ## Details
 <b>Framework: React</b> \
+<b>CSS: Bootstrap</b> \
 Author: Anurag R Simha \
 University ID: 14763701 \
 Drexel Email: ars589@drexel.edu
 
 ## Installation Guidelines
-You can do **any one** of these:
+**Any one** of the two setup methods can be followed:
 
 <b>A. Super quick and easy:</b> \
-i. If you are on a Linux/MacOS machine: \
+i. If on a Linux/MacOS machine: \
 Simply download and run setup.sh either from this repository by clicking the download button, or click on this link to directly download the script: [setup.sh](https://gitlab.com/anurag.rsimha/cs530-assignment-3/-/raw/main/setup.sh?ref_type=heads&inline=false)
 
 This script is **completely safe** to run. It only runs a set of git and npm commands.
 
-It takes care of the **entire setup process for you including running the application**. All you've got to do is execute the following commands: 
+It takes care of the **entire setup process including running the application**. All that has to be done is executing the following two commands: 
 ```
 chmod +x setup.sh
 ``` 
 ```
 ./setup.sh
 ```
-ii. If you are on a Windows machine: \
+ii. If on a Windows machine: \
 Simply download setup.bat either from this repository by clicking the download button, or click on this link to directly download the script: [setup.bat](https://gitlab.com/anurag.rsimha/cs530-assignment-3/-/raw/main/setup.bat?ref_type=heads&inline=false)
 
-Run setup.bat from a command line terminal window by simply heading to your downloads directory and entering "setup.bat".
+Run setup.bat from a command line terminal window by simply heading to the downloads directory and entering "setup.bat".
 
 This script is **also completely safe to run.** It's just a translation of setup.sh to make it compatible for Windows.
 
-If your download is blocked or the file is prevented from running, install git bash from https://git-scm.com/downloads and follow the steps laid out above in (i).
+If the download is blocked or the file is prevented from running, install git bash from https://git-scm.com/downloads and follow the steps laid out above in (i).
 
 **OR**
 
@@ -49,7 +50,7 @@ npm run dev
 
 Copy and paste/Ctrl+Click the link shown on the terminal window.
 
-If you don't have npm installed, please download it from https://nodejs.org/en or run `apt install npm` if you are on a Linux machine.
+If npm isn't installed, please download it from https://nodejs.org/en or run `apt install npm` if on a Linux machine.
 
 ## Implementation Details
 ### Directory Structure Followed
@@ -61,18 +62,21 @@ If you don't have npm installed, please download it from https://nodejs.org/en o
 │   ├── DetailsDisplay.jsx --> Displays name and age
 │   ├── Form.jsx --> Main form with required elements
 │   ├── Layout.jsx --> Wrapper for Form and DetailsDisplay
-│   ├── regex.js --> Regex properties file with validation regex values
-│   └── validation.js --> JavaScript file that validates user input
+│   └── regex.js --> Regex properties file with validation regex values
 ├── App.css --> Contains CSS for the entire project
 ├── App.jsx --> Parent for setting up everything
 ├── index.css --> Default file created during setup
 └── main.jsx --> The root file (also created during setup)
 ```
+
+### Technologies Used
+The entire code has been written with React. For styling, Bootstrap has been used to provide an interactive, user-friendly experience.
+
 ### File Interaction
 - The file, main.jsx acts as the root, which sets up the parent, App.jsx.
 - In App.jsx, which is the parent, everything is rendered. It sets up the layout, the form, and the display component.
 - App.jsx uses "useState" to handle data during input. It captures and sends them to the form and display components.
-- Form.jsx is where the entire form is rendered. It utilizes a JavaScript file called validation.js where the user's input is validated as they type in data. The submission button enables only when all of the entered data is correct.
+- Form.jsx is where the entire form is rendered. It uses functions, validateName and validateAge to validate the details. The submission button enables only when all of the entered data is correct.
 - With the details captured in Form, DetailsDisplay.jsx displays them once the "Submit" button is clicked.
 - Both, App.jsx and Form.jsx use the "useState" library provided by react to handle states during input.
 - Below is a textual representation of only the flow of data:
@@ -86,11 +90,11 @@ If you don't have npm installed, please download it from https://nodejs.org/en o
 
 ### Input Validation
 Several ways of data entry were considered to perform validation.\
-Name:
+**Name:**
 1. No name can contain a single character. There should be a minimum of two characters.
 2. No name can contain numbers in digital format like Alfred 3, Leonard2, etc. But, can contain numbers in Roman numeral. For example, names like Alfred III, Leonard II, etc. are allowed.
 3. Names with special characters like Alfred*, Leonard! are not allowed. Exceptions exist for names with apostrophes and hyphens. For example, names like Eric O'Connor, Ella-rose, Sean D'Bordeaux, etc. are allowed.
-4. No matter the case you use to enter your name, the program formats it properly and sends the data. For example, if you enter gEOrgE O'rEillY iIi, the output will present George O'Reilly III as the name.
+4. No matter the case used to enter the name, the program formats it properly and sends the data. For example, if the entered name is gEOrgE O'rEillY iIi, the output will present George O'Reilly III as the name.
 
 The regex, "/[^\p{L}\s'-]/u", performs checks (2) and (3). The \p{L} is there to support names in multiple languages like Bård, Jørgen, Weiß, Özdemir, Núñez, Ibáñez, etc. The apostrophe and hyphen allow names like O'Reilly, Ella-rose, etc.
 
@@ -102,7 +106,7 @@ BårdJørgen-o'weißÖzdemir d'NúñezIbáñez mXcIv
 ```
 The output will be: `Bårdjørgen-O'Weißözdemir D'Núñezibáñez MXCIV`
 
-Age:
+**Age:**
 1. Zero is not a valid age.
 2. The age should be a positive number.
 3. Age cannot contain decimal numbers like 23.5, 23.6, etc.
