@@ -32,7 +32,7 @@
   border-radius: 12px;
   text-align: center;
   animation: fadeIn 0.8s ease-out forwards;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 h1 {
@@ -93,8 +93,9 @@ input {
   margin-bottom: 15px;
 }
 
-.details-wrapper {
+.detailsWrapper {
   margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .detailsDisplay {
