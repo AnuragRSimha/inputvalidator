@@ -92,7 +92,8 @@ const Form = ({onSubmittingForm}) => {
         <form onSubmit={handleSubmit}>
             <div className="inputgroup">
                 <label>Full name:</label> 
-                <input type = 'text' placeholder="Enter name" maxLength={150} value={name} onChange={handleNameChange}/>
+                <input type = 'text' className={`form-control ${nameError ? 'is-invalid' : name ? 'is-valid' : ''}`} 
+                placeholder="Enter name" maxLength={150} value={name} onChange={handleNameChange}/>
                 {!name && !nameError && (
                     <small style={{ color: '#888', display: 'block', marginTop: '2px' }}>
                         Maximum 150 characters for the name
@@ -102,7 +103,8 @@ const Form = ({onSubmittingForm}) => {
             </div>
             <div className="inputgroup">
                 <label>Age:</label> 
-                <input type = 'number' placeholder="Enter age" value={age} onChange={handleAgeChange}/>
+                <input type = 'number' className={`form-control ${ageError ? 'is-invalid' : age ? 'is-valid' : ''}`} 
+                placeholder="Enter age" value={age} onChange={handleAgeChange}/>
                 {ageError && <span style={{ color: 'red', display: 'block' }}>{ageError}</span>}
             </div>
             <button className="btn btn-primary" type = "submit" disabled={!!nameError || !!ageError || !name || !age}><b>Submit</b></button>
