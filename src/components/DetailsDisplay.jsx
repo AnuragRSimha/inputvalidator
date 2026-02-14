@@ -1,6 +1,8 @@
 // Author: Anurag R Simha
 // This component is where a message combining the details submitted through the form get displayed.
 // Data sent from Form through App.jsx is captured and displayed via this component.
+// The useEffect() utility of react has been utilized to provide a typing animation to the display text.
+// With the formatTest() method, the name and age are highlighted in bold.
 import { useState, useEffect } from 'react';
 import '../App.css';
 

@@ -112,6 +112,7 @@ input {
   height: 1.2em;
   background-color: rgb(0, 0, 0); 
   vertical-align: middle;
+  margin-bottom: 4px;
 }
 
 @keyframes blink {
