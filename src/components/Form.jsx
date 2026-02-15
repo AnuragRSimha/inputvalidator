@@ -69,6 +69,7 @@ const Form = ({onSubmittingForm}) => {
         if(!nameError && !ageError && name && age){
             const formattedName = name
                 .trim()
+                .replace(/\s*([-'])\s*/g, "$1")
                 .split(/\s+/)
                 .map(word => {
                     if (romanCharsRegex.test(word)) {
