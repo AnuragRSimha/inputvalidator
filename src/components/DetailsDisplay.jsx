@@ -32,7 +32,7 @@ const DetailsDisplay = ({ name, age }) => {
         
         let parts = text.split(new RegExp(`(${name}|${age})`, 'g'));
         return parts.map((part, index) => 
-            (part === name || part === String(age)) ? <strong key={index}>{part}</strong> : part
+            (part === name || part === String(age)) ? <b key={index}>{part}</b> : part
         );
     };
 
